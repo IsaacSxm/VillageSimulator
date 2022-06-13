@@ -8,12 +8,15 @@ public class Environment {
 
     protected EnvironmentCondition environmentCondition;
     protected Village village;
-    protected int duration = 0;
-    protected int numberOfWarriors = 0;
-    protected int numberOfFarmers = 0;
+    protected int duration;
+    protected int numberOfWarriors;
+    protected int numberOfFarmers;
 
-    public Environment(EnvironmentCondition condition) {
+    public Environment(EnvironmentCondition condition, int duration, int numberOfWarriors, int numberOfFarmers) {
         this.environmentCondition = condition;
         this.village = new Village();
+        this.duration = duration;
+        this.numberOfWarriors = numberOfWarriors;
+        this.numberOfFarmers = numberOfFarmers;
     }
 }
