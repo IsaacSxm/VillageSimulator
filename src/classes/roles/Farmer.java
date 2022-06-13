@@ -1,4 +1,5 @@
 package classes.roles;
 
-public class Farmer {
+public class Farmer extends Roles{
+    //    Todo: Jonathan
 }

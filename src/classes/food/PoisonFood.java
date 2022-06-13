@@ -1,4 +1,6 @@
 package classes.food;
 
-public class PoisonFood {
+import interfaces.Food;
+
+public class PoisonFood implements Food {
 }

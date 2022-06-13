@@ -1,4 +1,6 @@
 package classes.food;
 
-public class GoodFood {
+import interfaces.Food;
+
+public class GoodFood implements Food {
 }

@@ -1,4 +1,5 @@
 package classes.roles;
 
-public class Roles {
+public abstract class Roles {
+//    Todo: Jonathan
 }

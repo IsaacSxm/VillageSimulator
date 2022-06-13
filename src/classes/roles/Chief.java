@@ -1,4 +1,5 @@
 package classes.roles;
 
-public class Chief {
+public class Chief extends Roles{
+    //    Todo: Jonathan
 }

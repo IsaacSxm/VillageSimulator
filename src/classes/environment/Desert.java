@@ -1,4 +1,7 @@
 package classes.environment;
 
-public class Desert {
+import interfaces.EnvironmentCondition;
+
+public class Desert implements EnvironmentCondition {
+    //    Todo: Virag
 }
