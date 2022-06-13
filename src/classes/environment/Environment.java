@@ -12,11 +12,11 @@ public class Environment {
     protected int numberOfWarriors;
     protected int numberOfFarmers;
 
-    public Environment(EnvironmentCondition condition, int duration, int numberOfWarriors, int numberOfFarmers) {
+    public Environment(EnvironmentCondition condition) {
         this.environmentCondition = condition;
         this.village = new Village();
-        this.duration = duration;
-        this.numberOfWarriors = numberOfWarriors;
-        this.numberOfFarmers = numberOfFarmers;
+//        this.duration = duration;
+//        this.numberOfWarriors = numberOfWarriors;
+//        this.numberOfFarmers = numberOfFarmers;
     }
 }
