@@ -60,7 +60,6 @@ public class Environment {
 
     //  Method(s)
     public void forage(){
-        // calculating food - poison and good food
         this.village.getForageSize();
         for(int i = 0; i < this.getEnvironmentCondition().spawnPoisonFood(); i++){
             this.village.getFood().add(new PoisonFood());
@@ -69,5 +68,4 @@ public class Environment {
             this.village.getFood().add(new GoodFood());
         }
     }
-
 }
