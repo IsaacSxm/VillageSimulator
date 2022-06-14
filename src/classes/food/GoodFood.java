@@ -15,6 +15,6 @@ public class GoodFood implements Food {
     @Override
     public int getImpact() {
 
-        return (int) (Math.random() * (MAXIMUM_HEALTH - MINIMUM_HEALTH));
+        return (int) ((Math.random() * (MAXIMUM_HEALTH - MINIMUM_HEALTH)) + MINIMUM_HEALTH);
     }
 }
