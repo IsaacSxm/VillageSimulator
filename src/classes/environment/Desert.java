@@ -12,22 +12,26 @@ public class Desert implements EnvironmentCondition {
     protected final static int MAXIMUM_GOOD_SPAWN = 3;
 
     //  Get Condition Type function
-    public void getConditionType(){
+    public String getConditionType(){
         //  get the type of the environment
+        return "Desert";
     }
 
     //  Warrior Spawn function
-    public void getSpawnWarrior(){
+    public int spawnWarriors(){
         //  counting
+        return (int) ((Math.random() * (MAXIMUM_POISON_SPAWN - MINIMUM_WARRIOR_SPAWN)) + MINIMUM_WARRIOR_SPAWN);
     }
 
     //  Poison Spawn function
-    public void getSpawnPoisonFood(){
+    public int spawnPoisonFood(){
         //  counting
+        return (int) ((Math.random() * (MAXIMUM_POISON_SPAWN - MINIMUM_POISON_SPAWN)) + MINIMUM_POISON_SPAWN);
     }
 
     //  Good Spawn function
-    public void getSpawnGoodFood(){
+    public int spawnGoodFood(){
         //  counting
+        return  (int) ((Math.random() * (MAXIMUM_GOOD_SPAWN - MINIMUM_GOOD_SPAWN)) + MINIMUM_GOOD_SPAWN);
     }
 }
