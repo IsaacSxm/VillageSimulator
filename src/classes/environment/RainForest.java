@@ -12,12 +12,23 @@ public class RainForest implements EnvironmentCondition {
     protected final static int MINIMUM_GOOD_SPAWN = 1;
     protected final static int MAXIMUM_GOOD_SPAWN = 5;
 
+    //  Get Condition Type function
+    public void getConditionType(){
+        //
+    }
+
     //  Warrior Spawn function
+    public void getSpawnWarrior(){
+        //
+    }
 
     //  Poison Spawn function
+    public void getSpawnPoisonFood(){
+        //
+    }
 
     //  Good Spawn function
-
-    //  Get Condition Type function
-
+    public void getSpawnGoodFood(){
+        //
+    }
 }
