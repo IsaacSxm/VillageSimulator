@@ -5,7 +5,6 @@ import interfaces.EnvironmentCondition;
 
 public class Environment {
     //    Todo: Virag
-
     protected EnvironmentCondition environmentCondition;
     protected Village village;
     protected int duration;
@@ -59,4 +58,5 @@ public class Environment {
     }
 
     //  Method(s)
+
 }
