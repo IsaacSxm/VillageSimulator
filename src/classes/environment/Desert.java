@@ -12,25 +12,25 @@ public class Desert implements EnvironmentCondition {
 
     @Override
     //  Get Condition Type function
-    public String getConditionType(){
+    public String getConditionType() {
         return "Desert";
     }
 
     @Override
     //  Warrior Spawn function
-    public int spawnWarriors(){
+    public int spawnWarriors() {
         return (int) ((Math.random() * (MAXIMUM_WARRIOR_SPAWN - MINIMUM_WARRIOR_SPAWN)) + MINIMUM_WARRIOR_SPAWN);
     }
 
     @Override
     //  Poison Spawn function
-    public int spawnPoisonFood(){
+    public int spawnPoisonFood() {
         return (int) ((Math.random() * (MAXIMUM_POISON_SPAWN - MINIMUM_POISON_SPAWN)) + MINIMUM_POISON_SPAWN);
     }
 
     @Override
     //  Good Spawn function
-    public int spawnGoodFood(){
-        return  (int) ((Math.random() * (MAXIMUM_GOOD_SPAWN - MINIMUM_GOOD_SPAWN)) + MINIMUM_GOOD_SPAWN);
+    public int spawnGoodFood() {
+        return (int) ((Math.random() * (MAXIMUM_GOOD_SPAWN - MINIMUM_GOOD_SPAWN)) + MINIMUM_GOOD_SPAWN);
     }
 }
