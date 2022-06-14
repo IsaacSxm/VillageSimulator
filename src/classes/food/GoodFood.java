@@ -5,14 +5,16 @@ import interfaces.Food;
 public class GoodFood implements Food {
     private int MINIMUM_HEALTH;
     private int MAXIMUM_HEALTH;
-    
+
     @Override
     public String getFoodType() {
-        return null;
+
+        return "Good";
     }
 
     @Override
     public int getImpact() {
-        return 0;
+
+        return (int) (Math.random() * (MAXIMUM_HEALTH - MINIMUM_HEALTH));
     }
 }
