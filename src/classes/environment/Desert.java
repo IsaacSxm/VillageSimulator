@@ -20,7 +20,7 @@ public class Desert implements EnvironmentCondition {
     //  Warrior Spawn function
     public int spawnWarriors(){
         //  counting
-        return (int) ((Math.random() * (MAXIMUM_POISON_SPAWN - MINIMUM_WARRIOR_SPAWN)) + MINIMUM_WARRIOR_SPAWN);
+        return (int) ((Math.random() * (MAXIMUM_WARRIOR_SPAWN - MINIMUM_WARRIOR_SPAWN)) + MINIMUM_WARRIOR_SPAWN);
     }
 
     //  Poison Spawn function
