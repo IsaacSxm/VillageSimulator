@@ -4,7 +4,6 @@ import classes.village.Village;
 import interfaces.EnvironmentCondition;
 
 public class Environment {
-    //    Todo: Virag
     protected EnvironmentCondition environmentCondition;
     protected Village village;
     protected int duration;
