@@ -14,7 +14,7 @@ public class RainForest implements EnvironmentCondition {
     //  Get Condition Type function
     public String getConditionType(){
         //  get the type of the environment
-        return "Desert";
+        return "Rainforest";
     }
 
     //  Warrior Spawn function
