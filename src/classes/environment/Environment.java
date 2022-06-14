@@ -59,6 +59,7 @@ public class Environment {
     //  Method(s)
     public void forage(){
         // calculating food - poison and good food
+        this.village.getForageSize();
     }
 
 }
