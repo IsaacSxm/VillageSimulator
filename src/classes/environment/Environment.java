@@ -15,8 +15,5 @@ public class Environment {
     public Environment(EnvironmentCondition condition) {
         this.environmentCondition = condition;
         this.village = new Village();
-//        this.duration = duration;
-//        this.numberOfWarriors = numberOfWarriors;
-//        this.numberOfFarmers = numberOfFarmers;
     }
 }
