@@ -12,4 +12,12 @@ public class Desert implements EnvironmentCondition {
     protected final static int MINIMUM_GOOD_SPAWN = 1;
     protected final static int MAXIMUM_GOOD_SPAWN = 3;
 
+    //  Warrior Spawn function
+
+    //  Poison Spawn function
+
+    //  Good Spawn function
+
+    //  Get Condition Type function
+
 }
