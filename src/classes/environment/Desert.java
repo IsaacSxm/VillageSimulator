@@ -19,16 +19,16 @@ public class Desert implements EnvironmentCondition {
 
     //  Warrior Spawn function
     public void getSpawnWarrior(){
-        //
+        //  counting
     }
 
     //  Poison Spawn function
     public void getSpawnPoisonFood(){
-        //
+        //  counting
     }
 
     //  Good Spawn function
     public void getSpawnGoodFood(){
-        //
+        //  counting
     }
 }
