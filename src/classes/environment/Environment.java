@@ -60,6 +60,12 @@ public class Environment {
     public void forage(){
         // calculating food - poison and good food
         this.village.getForageSize();
+        for(int i = 0; i < 10; i++){
+            //good food
+        }
+        for(int i = 0; i < 10; i++){
+            //poison food
+        }
     }
 
 }
