@@ -1,5 +1,7 @@
 package classes.environment;
 
+import classes.food.GoodFood;
+import classes.food.PoisonFood;
 import classes.village.Village;
 import interfaces.EnvironmentCondition;
 
@@ -61,10 +63,10 @@ public class Environment {
         // calculating food - poison and good food
         this.village.getForageSize();
         for(int i = 0; i < this.getEnvironmentCondition().spawnPoisonFood(); i++){
-            //good food
+            this.village.getFood().add(new PoisonFood());
         }
         for(int i = 0; i < this.getEnvironmentCondition().spawnGoodFood(); i++){
-            //poison food
+            this.village.getFood().add(new GoodFood());
         }
     }
 
