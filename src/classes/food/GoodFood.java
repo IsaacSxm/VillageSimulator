@@ -3,8 +3,8 @@ package classes.food;
 import interfaces.Food;
 //ToDo: Virag
 public class GoodFood implements Food {
-    private static int MINIMUM_HEALTH;
-    private static int MAXIMUM_HEALTH;
+    private static final int MINIMUM_HEALTH = 5;
+    private static final int MAXIMUM_HEALTH = 60;
 
     @Override
     public String getFoodType() {
