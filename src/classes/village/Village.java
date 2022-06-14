@@ -84,7 +84,7 @@ public class Village {
         }
         for (int i = 0; i < enemySize - 1; i++){
             /*
-                Murder just a lil :(
+                Murder just a little :(
                  */
             this.getWarriorVillagers().get(i).villager.kill();
         }
