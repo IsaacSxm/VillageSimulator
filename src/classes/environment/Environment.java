@@ -16,4 +16,47 @@ public class Environment {
         this.environmentCondition = condition;
         this.village = new Village();
     }
+
+    //  Getters and Setters
+    public EnvironmentCondition getEnvironmentCondition() {
+        return environmentCondition;
+    }
+
+    public void setEnvironmentCondition(EnvironmentCondition environmentCondition) {
+        this.environmentCondition = environmentCondition;
+    }
+
+    public Village getVillage() {
+        return village;
+    }
+
+    public void setVillage(Village village) {
+        this.village = village;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public int getNumberOfWarriors() {
+        return numberOfWarriors;
+    }
+
+    public void setNumberOfWarriors(int numberOfWarriors) {
+        this.numberOfWarriors = numberOfWarriors;
+    }
+
+    public int getNumberOfFarmers() {
+        return numberOfFarmers;
+    }
+
+    public void setNumberOfFarmers(int numberOfFarmers) {
+        this.numberOfFarmers = numberOfFarmers;
+    }
+
+    //  Method(s)
 }
