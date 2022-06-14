@@ -11,4 +11,6 @@ public class RainForest implements EnvironmentCondition {
     protected final static int MAXIMUM_POISON_SPAWN = 8;
     protected final static int MINIMUM_GOOD_SPAWN = 1;
     protected final static int MAXIMUM_GOOD_SPAWN = 5;
+
+
 }
