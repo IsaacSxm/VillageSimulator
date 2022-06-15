@@ -18,6 +18,7 @@ public class Main {
     private VillagerBuilder villagerBuilder = new VillagerBuilder();
     private String newVillagerCommand;
     private int numberOfDays;
+    private String restartSimulation;
 
 
     public void startMessage() {
@@ -67,6 +68,31 @@ public class Main {
         }
     }
     private void simulate() {
-
+        System.out.println("Creating environments ------------");
+        System.out.println("Building villagers ------------");
+        System.out.println("Spawning biomes -----------");
+        System.out.println("Spawning enemies -----------");
+        System.out.println("Spawning foods -----------");
+        for (int i = 0; i < this.numberOfDays; i++) {
+            this.environment.forage();
+            boolean warResult = this.environment.getVillage().fight(this.environment.getEnvironmentCondition().spawnWarriors());
+            System.out.println("The war was won: " + warResult);
+            this.environment.getVillage().feed();
+            System.out.println("Day " + i + " -----------completed!");
+        }
+        System.out.println("Simulation completed -----------");
+        System.out.println("Results -----------");
+        System.out.println("Final population: " + this.environment.getVillage().getPopulation() + " -----------");
+        System.out.println("Survivor population: " + this.environment.getVillage().getSurvivorCount() + " -----------");
+        System.out.println("Death population: " + this.environment.getVillage().getMortalityCount() + " -----------");
+        System.out.println("Female population: " + this.environment.getVillage().femaleGenderCount() + " -----------");
+        System.out.println("Male population: " + this.environment.getVillage().maleGenderCount() + " -----------");
+        System.out.println("Is Chief Alive: " + this.environment.getVillage().isChiefAlive() + " -----------");
+        System.out.println("Final food storage capacity: " + this.environment.getVillage().getForageSize() + " -----------");
+        System.out.println("Game over! Thank you for using our platform! press R to restart.");
+        this.restartSimulation = userInput.next();
+        if ("R".equals(this.restartSimulation)) {
+            this.startMessage();
+        }
     }
 }
