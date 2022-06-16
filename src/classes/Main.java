@@ -28,9 +28,11 @@ public class Main {
         switch (startCommand) {
             case 1 -> this.environment = new Environment(new Desert());
             case 2 -> this.environment = new Environment(new RainForest());
+            default -> this.startMessage();
         }
         System.out.print("Enter the number of days you want your simulation to run for ");
         this.numberOfDays = userInput.nextInt();
+        System.out.println("You have successfully created a " + this.environment.getEnvironmentCondition().getConditionType());
         this.creatAVillager();
     }
 
@@ -39,7 +41,6 @@ public class Main {
     }
 
     public void creatAVillager() {
-        System.out.println("You have successfully created a " + this.environment.getEnvironmentCondition().getConditionType());
         System.out.println("Press 1 to create a chief ");
         System.out.println("Press 2 to create a farmer ");
         System.out.println("Press 3 to create a warrior ");
@@ -48,24 +49,29 @@ public class Main {
             case 1 -> {
                 Roles role1 = new Chief(this.villagerBuilder.build());
                 this.environment.getVillage().addVillager(role1);
-                System.out.println(role1.getTitle() + " villager created ");
+                System.out.println(role1.getTitle() + " villager created");
             }
             case 2 -> {
                 Roles role2 = new Farmer(this.villagerBuilder.build());
                 this.environment.getVillage().addVillager(role2);
-                System.out.println(role2.getTitle() + " villager created ");
+                System.out.println(role2.getTitle() + " villager created");
             }
             case 3 -> {
                 Roles role3 = new Warrior(this.villagerBuilder.build());
                 this.environment.getVillage().addVillager(role3);
-                System.out.println(role3.getTitle() + " villager created ");
+                System.out.println(role3.getTitle() + " villager created");
+            }
+            default -> {
+                System.out.println("Wrong Input");
+                this.creatAVillager();
             }
         }
         System.out.println("Press N to create another Villager or X to start simulation ");
         this.newVillagerCommand = userInput.next();
-        switch (this.newVillagerCommand) {
+        switch (this.newVillagerCommand.toUpperCase()) {
             case "N" -> this.creatAVillager();
             case "X" -> this.simulate();
+            default -> userInput.next();
         }
     }
     private void simulate() {
@@ -92,7 +98,7 @@ public class Main {
         System.out.println("Final food storage capacity: " + this.environment.getVillage().getForageSize() + " -----------");
         System.out.println("Game over! Thank you for using our platform! press R to restart.");
         this.restartSimulation = userInput.next();
-        if ("R".equals(this.restartSimulation)) {
+        if (this.restartSimulation.equalsIgnoreCase("r")) {
             this.startMessage();
         }
     }
