@@ -37,6 +37,7 @@ public class Main {
     public void setUserInput(Scanner scanner) {
         this.userInput = scanner;
     }
+
     public void creatAVillager() {
         System.out.println("You have successfully created a " + this.environment.getEnvironmentCondition().getConditionType());
         System.out.println("Press 1 to create a chief ");
