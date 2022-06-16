@@ -23,5 +23,5 @@ The application will be coded in Java environment. The IDE that will be used for
 
 ## **Class Diagram.**
 
-![Class Diagram](image/VillageSimulator.png)
+![Class Diagram](image/VillageSimulator_CD.png)
 

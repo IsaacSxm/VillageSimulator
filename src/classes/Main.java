@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Main {
     private Environment environment;
-    private Scanner userInput = new Scanner(System.in);
+    private Scanner input = new Scanner(System.in);
     private int startCommand;
     private int villagerCommand;
     private VillagerBuilder villagerBuilder = new VillagerBuilder();
@@ -21,30 +21,30 @@ public class Main {
     private String restartSimulation;
 
 
-    public void startMessage() {
+    public void welcomeMessage() {
         System.out.println("This is a Villager simulation ");
         System.out.print("Press 1 to select a Desert environment or 2 to select a Rain forest environment ");
-        startCommand = userInput.nextInt();
+        startCommand = input.nextInt();
         switch (startCommand) {
             case 1 -> this.environment = new Environment(new Desert());
             case 2 -> this.environment = new Environment(new RainForest());
-            default -> this.startMessage();
+            default -> this.welcomeMessage();
         }
         System.out.print("Enter the number of days you want your simulation to run for ");
-        this.numberOfDays = userInput.nextInt();
+        this.numberOfDays = input.nextInt();
         System.out.println("You have successfully created a " + this.environment.getEnvironmentCondition().getConditionType());
         this.creatAVillager();
     }
 
-    public void setUserInput(Scanner scanner) {
-        this.userInput = scanner;
+    public void setInput(Scanner scanner) {
+        this.input = scanner;
     }
 
     public void creatAVillager() {
         System.out.println("Press 1 to create a chief ");
         System.out.println("Press 2 to create a farmer ");
         System.out.println("Press 3 to create a warrior ");
-        villagerCommand = userInput.nextInt();
+        villagerCommand = input.nextInt();
         switch (villagerCommand) {
             case 1 -> {
                 Roles role1 = new Chief(this.villagerBuilder.build());
@@ -67,11 +67,11 @@ public class Main {
             }
         }
         System.out.println("Press N to create another Villager or X to start simulation ");
-        this.newVillagerCommand = userInput.next();
+        this.newVillagerCommand = input.next();
         switch (this.newVillagerCommand.toUpperCase()) {
             case "N" -> this.creatAVillager();
             case "X" -> this.simulate();
-            default -> userInput.next();
+            default -> input.next();
         }
     }
     private void simulate() {
@@ -97,9 +97,9 @@ public class Main {
         System.out.println("Is Chief Alive: " + this.environment.getVillage().isChiefAlive() + " -----------");
         System.out.println("Final food storage capacity: " + this.environment.getVillage().getForageSize() + " -----------");
         System.out.println("Game over! Thank you for using our platform! press R to restart.");
-        this.restartSimulation = userInput.next();
+        this.restartSimulation = input.next();
         if (this.restartSimulation.equalsIgnoreCase("r")) {
-            this.startMessage();
+            this.welcomeMessage();
         }
     }
 }
